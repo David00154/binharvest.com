@@ -3,10 +3,113 @@ import HomeHero from "../components/Hero/HomeHero";
 import Layout from "../layouts/Layout.astro";
 import ctaImg from "../assets/images/cta-2-shape-1.png";
 import ctaImg2 from "../assets/images/cta-2-1-bg.png";
+import benefitBg1 from "../assets/images/benefit-bg-1-1.jpg";
+import benefitImg from "../assets/images/benefit-1-1.png";
 ---
 
 <Layout title="Binharvest">
-	<HomeHero />
+	<!-- <HomeHero /> -->
+	<section>
+		<div class="max-w-[1200px] flex mx-auto relative benefit-mega-section">
+			<!--  -->
+			<div class="sm:w-[50%] make-column">
+				<div class="benefit-left-wrap" style={`--bg-img:url('${benefitBg1}'); background-color: transparent; background-image: none;`}>
+					<!-- 1 -->
+					<div class="benefit-section-left-1" style={`--bg-img: url('${benefitBg1}')`}></div>
+					<!-- 2 -->
+					<div class="benefit-section-left-2"></div>
+					<!-- 3 -->
+					<div class="benefit-section-left-3">
+						<div class="section-container">
+							<div class="section-image clearfix">
+								<div class="section-image-inner image-overlay">
+									<img class="xl:max-w-[none] xl:w-auto max-w-full" decoding="async" src={benefitImg} alt="" />
+									<div class="section-caption">
+										<h3>99<span>%</span></h3>
+										<p>Success Rates Guarantee</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="sm:w-[50%] make-column">
+				<div
+					class="px-[15px] pt-[120px] flex relative flex-wrap content-start benefit-section-content-right"
+					style="transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;"
+				>
+					<div class="">
+						<p
+							class="uppercase text-custom-orange text-[14px] font-medium m-0 leading-[1.1] tracking-[.2em] relative top-[-1px] after:content-['||'] after:relative after:mr-[6px] after:text-[10px] after:top-[-1px] before:content-['||'] before:relative before:ml-[6px] before:text-[10px] before:top-[-1px]"
+						>
+							our benefits
+						</p>
+						<h2
+							class="text-custom-dark-primary m-0 font-bold lg:45px relative bottom-[-10px] mb-[50px] md:text-[40px] text-[35px] leading-[1.2em]"
+						>
+							Why you should choose our company
+						</h2>
+					</div>
+					<div class="" style="/*margin: 0 0 45px;*/">
+						<p class="m-0 text-text-color">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tenetur accusantium eligendi ad odio et rerum minima architecto
+							facere consequatur nesciunt quaerat, ipsa autem vero modi quis dicta vitae. Similique?
+						</p>
+					</div>
+					<div class="w-full">
+						<div style="transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform .4s;">
+							<div class="row" style="margin-top: 20px;">
+								<!-- 1 -->
+								<div style="margin-top: 20px;" class="w-full flex-[0_0_auto]">
+									<div class="relative flex items-start">
+										<div class="benefit-section-icon">
+											<i class="icon icon-bank"></i>
+										</div>
+										<div class="benefit-section-content">
+											<h3 class="m-0 text-[20px] leading-[1.5em] text-custom-dark-primary font-bold mb-[11px]">Lower trade fees</h3>
+											<p class="m-0 text-text-color">
+												Lorem ipsum dolor consectetur notte massa sapien samet. Aucibus sed sem non, mattis commodo nisi.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- 2 -->
+								<div style="margin-top: 20px;" class="w-full flex-[0_0_auto]">
+									<div class="relative flex items-start">
+										<div class="benefit-section-icon">
+											<i class="icon icon-payment"></i>
+										</div>
+										<div class="benefit-section-content">
+											<h3 class="m-0 text-[20px] leading-[1.5em] text-custom-dark-primary font-bold mb-[11px]">Up to 20.000$ limit</h3>
+											<p class="m-0 text-text-color">
+												Lorem ipsum dolor consectetur notte massa sapien samet. Aucibus sed sem non, mattis commodo nisi.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- 3 -->
+								<div style="margin-top: 20px;" class="w-full flex-[0_0_auto]">
+									<div class="relative flex items-start">
+										<div class="benefit-section-icon">
+											<i class="icon icon-smartphone-1"></i>
+										</div>
+										<div class="benefit-section-content">
+											<h3 class="m-0 text-[20px] leading-[1.5em] text-custom-dark-primary font-bold mb-[11px]">Easy in 3 steps</h3>
+											<p class="m-0 text-text-color">
+												Lorem ipsum dolor consectetur notte massa sapien samet. Aucibus sed sem non, mattis commodo nisi.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section
 		style={`background-position: top right; background-repeat: no-repeat; --cta-img: url('${ctaImg}');`}
 		class="bg-custom-orange pt-[80px] cta-section"
@@ -60,6 +163,176 @@ import ctaImg2 from "../assets/images/cta-2-1-bg.png";
 </Layout>
 
 <style>
+	.benefit-section-icon i.icon {
+		display: block;
+		font-size: 60px;
+		height: 60px;
+		width: 60px;
+		color: theme(colors.custom-orange);
+		position: relative;
+		transition: all 0.5s ease;
+	}
+	/*  */
+	/* background-color: transparent; background-image: none; background-position: bottom center; background-repeat: no-repeat; transition: background .3s,border .3s,border-radius .3s,box-shadow .3s; padding: 120px 15px 0; display: flex; position: relative; width: 100%; flex-wrap: wrap; align-content: flex-start; background-color:#e17b7b; background-image: url('${benefitBg1}'); background-position: bottom center; background-repeat: no-repeat; */
+	.clearfix::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	.benefit-left-wrap {
+		padding: 120px 15px 0;
+		background-color: #e17b7b;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+	}
+
+	.benefit-section-left-1 {
+		background-image: var(--bg-img);
+		background-color: rgb(225, 123, 123);
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: auto;
+		clip-path: polygon(0 0, 100% 0, 58% 100%, 0% 100%);
+		margin-left: -352px;
+		width: 574px;
+		/* right: 0; */
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.benefit-section-left-1:before {
+		background-color: theme(colors.custom-orange);
+		opacity: 0.9;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: "";
+		display: block;
+		top: 0;
+		left: 0;
+	}
+	.benefit-section-left-2 {
+		position: absolute;
+		left: 254px;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: skewX(-15deg);
+		transform-origin: left top;
+		background-color: #f2ede9;
+	}
+	.benefit-section-left-3 {
+		width: 100%;
+		position: relative;
+	}
+	.benefit-section-left-3 .section-container {
+		transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s;
+	}
+	/* .benefit-section-left-3 .section-container .section-image {
+		display: block;
+		position: relative;
+	} */
+	.benefit-section-left-3 .section-container .section-image .section-image-inner {
+		/* display: inline-block; */
+		position: relative;
+		right: 70px;
+		left: auto;
+	}
+	.benefit-section-left-3 .section-container .section-image .section-image-inner img {
+		height: auto;
+		position: relative;
+		z-index: 11;
+		max-width: 100%;
+	}
+	.benefit-section-left-3 .section-caption {
+		position: absolute;
+		text-align: left;
+		z-index: 13;
+		bottom: 0;
+		left: 0;
+		padding: 60px;
+	}
+	.benefit-section-left-3 .section-caption h3 {
+		font-size: 45px;
+		font-weight: 600;
+		color: theme(colors.custom-orange);
+	}
+	.benefit-section-left-3 .section-caption p {
+		margin: 0;
+		font-size: 18px;
+		line-height: 1.66667em;
+		color: white;
+	}
+	.image-overlay:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: "";
+		background-image: linear-gradient(0deg, theme(colors.custom-dark-primary) 0%, rgba(28, 28, 39, 0) 100%);
+		z-index: 12;
+	}
+
+	/*  */
+	.benefit-section-icon {
+		padding-left: 20px;
+		padding-top: 20px;
+		position: relative;
+		margin-right: 45px;
+	}
+	.benefit-section-icon:before {
+		content: "";
+		width: 61px;
+		height: 61px;
+		background-color: #f2ede9;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		transform: scale(1);
+		transform-origin: right center;
+		transition: transform 0.5s ease;
+	}
+	.make-column {
+		position: relative;
+		display: flex;
+		min-height: 1px;
+	}
+	@media (max-width: 575px) {
+		.make-column {
+			width: 100%;
+		}
+	}
+	@media (max-width: 991px) {
+		.benefit-left-wrap {
+			padding: 80px 15px 0;
+		}
+		.benefit-mega-section {
+			flex-wrap: wrap;
+		}
+		.benefit-section-content-right {
+			padding: 60px 15px 0;
+		}
+	}
+	@media (max-width: 1199px) {
+		.benefit-section-left-1,
+		.benefit-section-left-2 {
+			display: none;
+		}
+		.benefit-section-left-3 .section-container .section-image {
+			display: block;
+			text-align: center;
+		}
+		.benefit-section-left-3 .section-container .section-image .section-image-inner {
+			right: 0;
+			left: auto;
+		}
+	}
+	/*  */
 	@media (min-width: 992px) {
 		.cta-img-2 img {
 			max-width: none !important;
