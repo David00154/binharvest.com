@@ -5,7 +5,7 @@ import logo from "../assets/images/logo-light.png"
 const Header = () => {
     const search = useRef(null)
     const menu_toggle = useRef(null)
-    const [links, _] = useState(["Home", "Pricing", "Tools & Platforms", "About", "Contact Us", "Learn"])
+    const [links, _] = useState(["Home", "About", "Pricing", "Contact Us", "FAQs", "Learn"])
     function handleSearchClick() {
         (search.current as HTMLElement).classList.toggle("expanded")
     }
