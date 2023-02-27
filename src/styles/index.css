@@ -59,7 +59,7 @@
 @tailwind utilities;
 @layer utilities {
 	.container-fluid {
-		@apply mx-auto w-full px-[0.75rem] xl:max-w-[1200px] max-w-[540px] lg:max-w-[960px] md:max-w-[720px];
+		@apply mx-auto w-full px-[1rem] xl:max-w-[1200px] max-w-[540px] lg:max-w-[960px] md:max-w-[720px];
 	}
 	.custom-cursor-one {
 		@apply w-6 h-6 rounded-[100%] border border-custom-orange border-solid fixed pointer-events-none left-0 top-0 z-[999991];
