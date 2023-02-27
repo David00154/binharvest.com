@@ -5,7 +5,32 @@ import logo from "../assets/images/logo-light.png"
 const Header = () => {
     const search = useRef(null)
     const menu_toggle = useRef(null)
-    const [links, _] = useState(["Home", "About", "Pricing", "Contact Us", "FAQs", "Learn"])
+    const [links, _] = useState([
+        {
+            text: "Home",
+            href: "/"
+        },
+        {
+            text: "About",
+            href: "/about"
+        },
+        {
+            text: "Pricing",
+            href: "/#pricing"
+        },
+        {
+            text: "Contact Us",
+            href: "/contact-us"
+        },
+        {
+            text: "FAQs",
+            href: "/faqs"
+        },
+        {
+            text: "Learn",
+            href: "/#"
+        },
+    ])
     function handleSearchClick() {
         (search.current as HTMLElement).classList.toggle("expanded")
     }
@@ -98,9 +123,9 @@ const MobileNav = forwardRef(function (props: any, ref: any) {
                 <div>
                     <ul className='m-0 p-0'>
                         {links.map((link, index) => (
-                            <li className='border-b border-b-[rgba(255,255,255,.1)]' key={index}>
-                                <a className='flex justify-between leading-[30px] text-white font-medium h-[50px] items-center' href="#">
-                                    {link}
+                            <li onClick={() => (ref.current as HTMLElement).classList.toggle('expanded')} className='border-b border-b-[rgba(255,255,255,.1)]' key={index}>
+                                <a className='flex justify-between leading-[30px] text-white font-medium h-[50px] items-center' href={link.href}>
+                                    {link.text}
                                     <button className='w-[30px] h-[30px] p-0 border-none bg-custom-orange flex items-center justify-center text-center'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z" /></svg>
                                     </button>
@@ -113,14 +138,13 @@ const MobileNav = forwardRef(function (props: any, ref: any) {
                 {/*  */}
                 <ul className='mx-0 my-[20px]'>
                     <li className='text-[14px] relative flex items-center text-[#a2a2b1] font-medium'>
-                        <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm8-7L4 8v10h16V8l-8 5Zm0-2l8-5H4l8 5ZM4 8V6v12V8Z" /></svg>
+                        <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-email'>
+
                         </i>
                         <a href="#" className='text-white'>support@binharvest.com</a>
                     </li>
                     <li className='text-[14px] relative flex items-center text-[#a2a2b1] font-medium mt-[15px]'>
-                        <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M19 11.95q0-2.925-2.038-4.963Q14.925 4.95 12 4.95v-2q1.875 0 3.513.712q1.637.713 2.85 1.926q1.212 1.212 1.925 2.85Q21 10.075 21 11.95Zm-4 0q0-1.25-.875-2.125T12 8.95v-2q2.075 0 3.538 1.462Q17 9.875 17 11.95ZM19.95 21q-3.225 0-6.287-1.425q-3.063-1.425-5.425-3.8q-2.363-2.375-3.8-5.438Q3 7.275 3 4.05v-.525Q3 3.25 3.05 3H8.9l.925 5.025l-2.85 2.875q1.05 1.8 2.638 3.375Q11.2 15.85 13.1 17l2.9-2.9l5 1v5.85q-.25.025-.525.038Q20.2 21 19.95 21Z" /></svg>
+                        <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-telephone'>
                         </i>
                         <a href="#" className='text-white'>222 222 2222</a>
                     </li>
@@ -135,7 +159,7 @@ const Nav: FC<{ links: Array<any> }> = ({ links }) => {
         <ul className=" xl:flex items-center hidden">
             {links.map((link, index) => (
                 <li key={index} className={`text-menu-link py-[35px] text-[16px] ${index != 0 && 'ml-[35px]'}`}>
-                    <a className={`menu-item custom-transition relative flex items-center ${index == 0 && 'active'}`} href="#" x-text="item">{link}</a>
+                    <a className={`menu-item custom-transition relative flex items-center ${index == 0 && 'active'}`} href={link.href} x-text="item">{link.text}</a>
                 </li>
             ))}
         </ul>

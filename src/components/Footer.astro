@@ -1,0 +1,302 @@
+---
+import footerBg from "../assets/images/footer-bg-1-1.png";
+import logo from "../assets/images/logo-light.png";
+
+const date = new Date().getFullYear();
+const links = [
+	{
+		text: "About",
+		href: "/about",
+	},
+	{
+		text: "Pricing",
+		href: "/#pricing",
+	},
+	{
+		text: "Contact Us",
+		href: "/contact-us",
+	},
+	{
+		text: "FAQs",
+		href: "/faqs",
+	},
+	{
+		text: "Get Started Now",
+		href: "#",
+	},
+];
+---
+
+<footer class="footer" style={`--footer-bg: url(${footerBg});`}>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- 1 -->
+			<div class="footer-widget-item col-4">
+				<div class="">
+					<!-- -->
+					<div class="footer-widget-about">
+						<div class="footer-logo">
+							<img src={logo} width="140" alt="" />
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.</p>
+						<ul class="mx-0 mt-[30px]">
+							<li class="text-[14px] relative flex items-center text-[#a2a2b1] font-medium">
+								<i
+									class="text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-email"
+								>
+								</i>
+								<a href="#" class="text-white text-[16px] font-bold" style="transition: all .5s ease;">support@binharvest.com</a>
+							</li>
+							<li class="text-[14px] relative flex items-center text-[#a2a2b1] font-medium mt-[15px]">
+								<i
+									class="text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-telephone"
+								>
+								</i>
+								<a href="#" class="text-white text-[16px] font-bold" style="transition: all .5s ease;">222 222 2222</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="footer-widget-item col-2">
+				<div class="">
+					<!--  -->
+					<div class="footer-widget-explore">
+						<h3>Explore</h3>
+						<ul class="footer-widget-explore-links">
+							{
+								links.map((link, index) => (
+									<li class="link-item">
+										<a href={link.href}>{link.text}</a>
+									</li>
+								))
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="footer-widget-item col-3">
+				<div class="">
+					<div class="footer-widget-timing">
+						<h3>Timing</h3>
+						<div class="footer-widget-timing-content">
+							<p>
+								Mon Fri: 7:00am - 6:00pm
+								<br />
+								Saturday: 9:00am - 5:00pm
+								<br />
+								Sunday: Closed
+							</p>
+						</div>
+					</div>
+					<div class="footer-widget-timing-icons">
+						<a href="#">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-pinterest"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 4 -->
+			<div class="footer-widget-item col-3">
+				<div class="">
+					<div class="footer-widget-newsletter">
+						<h3>Newsletter</h3>
+						<form action="#" method="post">
+							<div class="form-items">
+								<div class="flex inner">
+									<input class="text-field" type="email" name="email" placeholder="Email address" />
+									<input type="submit" value="Send" class="submit-btn" />
+								</div>
+								<p>
+									<span>I agree to all your terms and policies</span>
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Bottom Footer -->
+<div class="bg-custom-dark-secondary py-[22px]">
+	<div class="container-fluid">
+		<p class="text-[15px] text-center text-[#a2a2b1]">Copyright © {date} All Rights Reserved</p>
+	</div>
+</div>
+
+<style>
+	.footer {
+		background-repeat: repeat;
+		background-size: cover;
+		background-image: var(--footer-bg);
+		background-position: top center;
+		background-blend-mode: luminosity;
+		padding-top: 90px;
+		padding-bottom: 100px;
+		background-color: theme(colors.custom-dark-primary);
+	}
+	.footer .row {
+		justify-content: space-between !important;
+	}
+	.footer-widget-item > * {
+		color: #999;
+
+		word-wrap: break-word;
+	}
+	/*  */
+	.footer-widget-about .footer-logo {
+		position: relative;
+		display: inline-flex;
+		/* margin-top: -50px; */
+	}
+	.footer-widget-about .footer-logo img {
+		max-width: 100%;
+	}
+	.footer-widget-about p {
+		color: #a2a2b1;
+		margin: 0;
+		margin-top: 12px;
+		font-size: 16px;
+		line-height: 1.875em;
+	}
+	/*  */
+	.footer-widget-explore h3,
+	.footer-widget-timing h3,
+	.footer-widget-newsletter h3 {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		margin-bottom: 30px;
+		font-weight: 500;
+		color: white;
+	}
+	.footer-widget-explore h3::before,
+	.footer-widget-timing h3::before,
+	.footer-widget-newsletter h3::before {
+		font-size: 18px;
+		content: "||";
+		margin-right: 10px;
+		color: theme(colors.custom-orange);
+	}
+	.footer-widget-explore li.link-item {
+		font-weight: 400;
+		color: #a2a2b1;
+	}
+	.footer-widget-explore li.link-item a {
+		margin-bottom: 10px;
+		display: block;
+		line-height: 1.4;
+	}
+	.footer-widget-timing-content p {
+		font-weight: 400;
+		font-size: 16px;
+		color: #a2a2b1;
+		margin: 0;
+		margin-top: -10px;
+		display: block;
+		line-height: 2.5;
+	}
+	/*  */
+	.footer-widget-timing-icons {
+		display: flex;
+		margin-top: 20px;
+		align-items: center;
+		gap: 12px;
+	}
+	.footer-widget-timing-icons a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 41px;
+		height: 41px;
+		color: #fff;
+		font-size: 12px;
+		transition: all 0.5s ease;
+		border-radius: 50%;
+		background-color: theme(colors.custom-dark-secondary);
+	}
+	.footer-widget-timing-icons a:hover {
+		color: theme(colors.custom-dark-secondary);
+		background-color: white;
+	}
+	/*  */
+	.footer-widget-newsletter form .form-items .inner .text-field {
+		display: block;
+		width: 100%;
+		height: 50px;
+		outline: none;
+		background-color: rgba(0, 0, 0, 0);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #a2a2b1;
+		font-size: 14px;
+		padding: 10px;
+	}
+	.footer-widget-newsletter form .form-items .inner .submit-btn {
+		padding: 0 20px;
+		font-size: 14px;
+		color: white;
+		cursor: pointer;
+		transition: all 0.25s ease;
+		line-height: 1.2;
+		background-color: theme(colors.custom-orange);
+	}
+	.footer-widget-newsletter form .form-items .inner .submit-btn:hover {
+		background-color: white;
+		color: theme(colors.custom-dark-secondary);
+	}
+	.footer-widget-newsletter form .form-items p {
+		color: #a2a2b1;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		margin-top: 27px;
+		margin-bottom: 0;
+	}
+	@media (min-width: 992px) {
+		.footer-widget-item {
+			flex: 0 0 auto;
+		}
+		.footer-widget-item.col-4 {
+			width: 33.33333333%;
+		}
+		.footer-widget-item.col-2 {
+			width: 16.66666667%;
+		}
+		.footer-widget-item.col-3 {
+			width: 25%;
+		}
+	}
+	@media (min-width: 768px) {
+		.footer-widget-item {
+			flex: 0 0 auto;
+			width: 50%;
+		}
+	}
+	@media (min-width: 576px) {
+		.footer-widget-item {
+			flex: 0 0 auto;
+			width: 50%;
+		}
+		/* .footer .row > * {
+			margin-top: 30px;
+		} */
+	}
+	@media (max-width: 576px) {
+		.footer .row > * {
+			margin-top: 30px;
+		}
+	}
+</style>

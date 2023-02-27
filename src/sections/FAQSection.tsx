@@ -26,15 +26,6 @@ const faqs = [
         title: "Quisque quis urna ",
         content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
     },
-    {
-        title: "Nunc dui massa, ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
-    },
-
-    {
-        title: "Quisque quis urna ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
-    },
 ]
 
 const FAQSection = () => {
