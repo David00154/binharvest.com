@@ -14,10 +14,10 @@ const Header = () => {
             text: "About",
             href: "/about"
         },
-        {
-            text: "Pricing",
-            href: "/#pricing"
-        },
+        // {
+        //     text: "Pricing",
+        //     href: "/#pricing"
+        // },
         {
             text: "Contact Us",
             href: "/contact-us"
