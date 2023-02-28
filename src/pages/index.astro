@@ -5,10 +5,14 @@ import Layout from "../layouts/Layout.astro";
 import BenefitSection from "../sections/home-sections/BenefitSection.astro";
 import CtaSection from "../sections/CtaSection1.astro";
 import FAQSection from "../sections/FAQSection";
+import AboutCompanySection from "../sections/AboutCompanySection.astro";
+import ServicesSection from "../sections/ServicesSection.astro";
 ---
 
 <Layout title="Binharvest">
 	<!-- <HomeHero /> -->
+	<AboutCompanySection />
+	<ServicesSection />
 	<BenefitSection />
 	<FAQSection client:only />
 	<CtaSection />

@@ -26,10 +26,6 @@ const Header = () => {
             text: "FAQs",
             href: "/faqs"
         },
-        {
-            text: "Learn",
-            href: "/#"
-        },
     ])
     function handleSearchClick() {
         (search.current as HTMLElement).classList.toggle("expanded")
@@ -42,7 +38,7 @@ const Header = () => {
         <header className="w-full bg-custom-dark-secondary">
             <div className="container-fluid flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center h-auto pl-[20px] md:pl-[20px] xl:py-0 py-[20px]">
+                <div className="flex items-center h-auto pl-[10px] md:pl-[20px] xl:py-0 py-[20px]">
                     <a href="#">
                         <img src={logo} width="140" alt="" />
                     </a>
