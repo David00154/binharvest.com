@@ -135,7 +135,7 @@ const FAQSection = () => {
                 }
                 @media (min-width:992px) {
                     .faq-section-heading h2{
-                        font-size: 45   px;
+                        font-size: 45px;
                     }
                 }
                 .faq-section-container{

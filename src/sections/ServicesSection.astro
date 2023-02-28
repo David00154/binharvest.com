@@ -1,4 +1,199 @@
 ---
+const services = [
+	{
+		title: "Safe and Secure Payments",
+		description: "Duis aute irure dolor lipsum free is simply free text the local markets in reprehenderit.",
+		href: "#",
+		icon: "icon-smartphone",
+	},
+	{
+		title: "Quick Payments Process",
+		description: "Duis aute irure dolor lipsum free is simply free text the local markets in reprehenderit.",
+		href: "#",
+		icon: "icon-operation",
+	},
+	{
+		title: "No Prepayment Charges",
+		description: "Duis aute irure dolor lipsum free is simply free text the local markets in reprehenderit.",
+		href: "#",
+		icon: "icon-payment",
+	},
+];
 ---
 
-<section></section>
+<section class="services-section">
+	<div class="container-fluid">
+		<div class="wrap-column">
+			<div class="section-widget-wrap">
+				<div class="wrap">
+					<div class="row">
+						{
+							services.map((service) => (
+								<div class="item-column col-lg-4 col-md-12">
+									<div class="service-card">
+										<div class="service-card-icon">
+											<i class={`icon ${service.icon}`} />
+										</div>
+										<div class="service-card-content">
+											<h3>
+												<a href="#">{service.title}</a>
+											</h3>
+											<p>{service.description}</p>
+											<a href={service.href} id="" class="card-link">
+												More details
+											</a>
+										</div>
+										<div class="service-card-inner-icon">
+											<i class={`icon ${service.icon}`} />
+										</div>
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	/*  */
+	.services-section {
+		margin-top: -280px;
+		margin-bottom: -157px;
+		position: relative;
+	}
+	.services-section .wrap-column {
+		position: relative;
+		min-height: 1px;
+		display: flex;
+	}
+	.services-section .wrap-column .section-widget-wrap {
+		padding: 0 15px;
+		display: flex;
+		position: relative;
+		width: 100%;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap {
+		transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s, transform 0.4s;
+		position: relative;
+		z-index: 10;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row {
+		margin-top: calc(-1 * 30px);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row > * {
+		margin-top: 30px;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card {
+		background-color: #fff;
+		box-shadow: 0px 3px 30px rgb(0 0 0 / 15%);
+		padding: 50px;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 30px;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card:hover > .service-card-inner-icon {
+		opacity: 0.2;
+		right: 20px;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-icon {
+		position: relative;
+		display: flex;
+		margin-bottom: 30px;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-icon::before {
+		content: "";
+		width: 61px;
+		height: 61px;
+		background-color: #f2ede9;
+		position: absolute;
+		top: -10px;
+		left: -20px;
+		border-radius: 50%;
+		transform: scale(1);
+		transform-origin: right center;
+		transition: transform 0.5s ease;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-icon i {
+		position: relative;
+		font-size: 60px;
+		color: theme(colors.custom-orange);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content {
+		position: relative;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content h3 {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.2em;
+		margin-top: -3px;
+		margin-bottom: 20px;
+		color: #1c1c27;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content h3 > a {
+		color: inherit;
+		transition: all 0.5s ease;
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content h3 > a:hover {
+		color: theme(colors.custom-orange);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content p {
+		margin: 0;
+		margin-bottom: 19px;
+		color: theme(colors.text-color);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content .card-link {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.2em;
+		display: inline-block;
+		padding-bottom: 2px;
+		transition: all 0.5s ease;
+		border-bottom: 3px solid theme(colors.custom-dark-primary);
+		color: theme(colors.custom-dark-primary);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-inner-icon {
+		position: absolute;
+		right: 0;
+		bottom: 20px;
+		opacity: 0;
+		font-size: 70px;
+		line-height: 1;
+		transition: all 0.5s ease;
+		color: theme(colors.custom-orange);
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: none;
+		color: theme(colors.custom-orange);
+	}
+	.services-section .wrap-column .section-widget-wrap .wrap .row .item-column .service-card .service-card-content .card-link:hover {
+		color: theme(colors.custom-orange);
+		border-color: theme(colors.custom-orange);
+	}
+	/*  */
+	@media (min-width: 992px) {
+		.col-lg-4 {
+			flex: 0 0 auto;
+			width: 33.33333333%;
+		}
+	}
+	@media (min-width: 768px) {
+		.col-lg-12 {
+			flex: 0 0 auto;
+			width: 100%;
+		}
+	}
+	@media (min-width: 576px) {
+		.wrap-column {
+			width: 100%;
+		}
+	}
+</style>
