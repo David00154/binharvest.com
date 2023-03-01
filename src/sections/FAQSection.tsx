@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, FC } from 'react'
 
 const faqs = [
     {
@@ -28,7 +28,7 @@ const faqs = [
     },
 ]
 
-const FAQSection = () => {
+const FAQSection: FC<{ showHeader?: boolean }> = ({ showHeader = true }) => {
     let right = faqs.splice(0, (faqs.length / 2))
     let left = faqs
     const [column1, setColumn1] = useState<Array<any>>(right)
@@ -36,13 +36,16 @@ const FAQSection = () => {
     return (
         <Fragment>
             <section className='faq-section'>
+
                 <div className="faq-section-heading">
                     <p
                         className="uppercase text-custom-orange text-[14px] font-medium m-0 leading-[1.1] tracking-[.2em] relative top-[-1px] after:content-['||'] after:relative after:mr-[6px] after:text-[10px] after:top-[-1px] before:content-['||'] before:relative before:ml-[6px] before:text-[10px] before:top-[-1px]"
                     >
                         our most asked questions
                     </p>
-                    <h2>FAQs</h2>
+                    {showHeader && (
+                        <h2>FAQs</h2>
+                    )}
                 </div>
                 <div className="faq-section-container">
                     {/* 1 */}

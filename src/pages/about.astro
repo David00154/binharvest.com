@@ -1,5 +1,14 @@
 ---
+import PageHero from "../components/Hero/PageHero.astro";
 import Layout from "../layouts/Layout.astro";
+import AboutCompanySection from "../sections/AboutCompanySection.astro";
+import CtaSection1 from "../sections/CtaSection1.astro";
+import FactNumbersSection from "../sections/FactNumbersSection.astro";
 ---
 
-<Layout title="About" />
+<Layout title="About">
+	<PageHero title="About Us" />
+	<AboutCompanySection />
+	<FactNumbersSection addMargin={true} />
+	<CtaSection1 />
+</Layout>

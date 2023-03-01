@@ -1,5 +1,10 @@
 ---
+import PageHero from "../components/Hero/PageHero.astro";
 import Layout from "../layouts/Layout.astro";
+import FAQSection from "../sections/FAQSection";
 ---
 
-<Layout title="FAQs" />
+<Layout title="FAQs">
+	<PageHero title="FAQs" />
+	<FAQSection showHeader={false} client:only />
+</Layout>

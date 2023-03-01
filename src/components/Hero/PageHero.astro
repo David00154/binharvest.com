@@ -1,0 +1,109 @@
+---
+interface Props {
+	title: string;
+}
+
+import heroBg from "../../assets/images/page-header-bg-1-1-1.jpg";
+const { title } = Astro.props;
+---
+
+<section class="page-hero">
+	<div class="page-hero-bg" style={`--hero-bg: url(${heroBg});`}></div>
+	<div class="container-fluid page-hero-container">
+		<div class="page-hero-bread-crump">
+			<!--  -->
+			<span property="itemListElement" typeof="ListItem">
+				<a href={Astro.url.origin} id="" class="home">
+					<span property="name">Home</span>
+				</a>
+				<meta property="position" content="1" />
+			</span>
+			/
+			<!--  -->
+			<span property="itemListElement" typeof="ListItem">
+				<span property="name" class="post post-page current-item"
+					>{title}<span>
+						<meta property="url" content={Astro.url.href} /><meta property="position" content="2" />
+					</span>
+				</span>
+			</span>
+		</div>
+		<h2>{title}</h2>
+	</div>
+	<!-- <div class="absolute h-full w-full top-0 left-0" style="background-image: linear-gradient(0deg,#1c1c27 0%,rgba(28,28,39,0) 100%);"></div> -->
+</section>
+<style>
+	/*  */
+	.page-hero {
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		position: relative;
+		background-color: theme(colors.custom-dark-primary);
+	}
+	.page-hero .page-hero-bg {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: var(--hero-bg);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.page-hero .page-hero-container {
+		position: relative;
+		z-index: 10;
+		padding-top: 125px;
+		padding-bottom: 125px;
+		width: 100%;
+	}
+	.page-hero .page-hero-container > h2 {
+		margin: 0;
+		line-height: 1;
+		color: #fff;
+		font-size: 45px;
+		word-wrap: break-word;
+		font-weight: 700;
+	}
+	.page-hero-bread-crump {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+		margin-left: -10px;
+		align-items: center;
+		color: #98989c;
+	}
+	.page-hero-bread-crump > span[typeof="ListItem"] {
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+	}
+	.page-hero-bread-crump > span[typeof="ListItem"] a {
+		transition: all 0.5s ease;
+		color: #98989c;
+	}
+	.page-hero-bread-crump > span[typeof="ListItem"] a > span {
+		color: inherit;
+		margin: 0 10px;
+	}
+	.page-hero-bread-crump > span[typeof="ListItem"] span.current-item {
+		display: block;
+		margin-left: 10px;
+		line-height: 1;
+		color: theme(colors.custom-orange);
+	}
+	/*  */
+	@media (max-width: 480px) {
+		.page-hero .page-hero-container {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+	}
+</style>

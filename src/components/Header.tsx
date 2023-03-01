@@ -2,7 +2,7 @@
 import { FC, forwardRef, useEffect, useRef, useState } from 'react'
 import logo from "../assets/images/logo-light.png"
 
-const Header = () => {
+const Header: FC<{ pathname: string }> = ({ pathname }) => {
     const search = useRef(null)
     const menu_toggle = useRef(null)
     const [links, _] = useState([
@@ -48,7 +48,7 @@ const Header = () => {
                 {/* Mobile Nav */}
                 <MobileNav links={links} ref={menu_toggle} />
                 {/* Nav */}
-                <Nav links={links} />
+                <Nav pathname={pathname} links={links} />
                 <ul className="flex items-center">
                     <a onClick={handleMenuToggle} href="#" className="flex items-center text-white xl:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
@@ -150,12 +150,12 @@ const MobileNav = forwardRef(function (props: any, ref: any) {
     )
 })
 
-const Nav: FC<{ links: Array<any> }> = ({ links }) => {
+const Nav: FC<{ links: Array<any>, pathname: string }> = ({ links, pathname }) => {
     return (
         <ul className=" xl:flex items-center hidden">
             {links.map((link, index) => (
                 <li key={index} className={`text-menu-link py-[35px] text-[16px] ${index != 0 && 'ml-[35px]'}`}>
-                    <a className={`menu-item custom-transition relative flex items-center ${index == 0 && 'active'}`} href={link.href} x-text="item">{link.text}</a>
+                    <a className={`menu-item custom-transition relative flex items-center ${pathname == link.href && 'active'}`} href={link.href} x-text="item">{link.text}</a>
                 </li>
             ))}
         </ul>

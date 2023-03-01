@@ -1,0 +1,21 @@
+---
+interface Props {
+	addMargin: boolean;
+}
+import factBgImg from "../assets/images/fact-bg-1-1.png";
+const { addMargin = true } = Astro.props;
+---
+
+<section class="fact-numbers-section" style={`--fact-bg: url(${factBgImg}); margin-top: ${addMargin ? "-270px" : "0"};`}></section>
+
+<style>
+	.fact-numbers-section {
+		/* margin-bottom: 220px; */
+		background-image: var(--fact-bg);
+		transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+		position: relative;
+		padding: 180px 0 90px;
+		background-position: center center;
+		background-color: theme(colors.custom-dark-primary);
+	}
+</style>
