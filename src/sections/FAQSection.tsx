@@ -2,29 +2,29 @@ import { Fragment, useState, FC } from 'react'
 
 const faqs = [
     {
-        title: "Nunc dui massa, ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: "What is the best way to start investing for beginners? ",
+        content: "The best way for beginners to start investing is to research and educate themselves on different investment options and strategies. It's also recommended to start with small investments and gradually increase as you gain experience and confidence.",
     },
     {
-        title: "Quisque quis urna ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: "What is a stock market index? ",
+        content: "A stock market index is a measure of the overall performance of a group of stocks. It tracks the performance of a specific set of stocks and provides a benchmark for investors to compare the performance of their own investments.",
     },
     {
-        title: "Nunc dui massa, ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: "What is diversification in investment? ",
+        content: "Diversification is a strategy where investors spread their money across different investment types and sectors to reduce risk. This helps to protect the portfolio from market volatility and can potentially increase returns.",
     },
 
     {
-        title: "Quisque quis urna ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: "What is the difference between a market order and a limit order? ",
+        content: "A market order is an order to buy or sell a security at the best available price in the market, while a limit order is an order to buy or sell a security at a specified price or better.",
     },
     {
-        title: "Nunc dui massa, ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: " What are the risks of investing in the stock market? ",
+        content: "The risks of investing in the stock market include market volatility, economic uncertainty, company-specific risks, and geopolitical risks. It's important for investors to assess and manage these risks before making any investment decisions.",
     },
     {
-        title: "Quisque quis urna ",
-        content: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable. Phasellus a rhoncus erat.",
+        title: "How can I determine my risk tolerance for investing? ",
+        content: "To determine your risk tolerance, you should consider your financial goals, investment time horizon, and your ability to handle market fluctuations. You can also take risk tolerance questionnaires or consult with a financial advisor to help you determine your risk tolerance.",
     },
 ]
 
