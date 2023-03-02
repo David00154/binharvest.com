@@ -137,7 +137,7 @@ const MobileNav = forwardRef(function (props: any, ref: any) {
                         <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-email'>
 
                         </i>
-                        <a href="#" className='text-white'>support@binharvest.com</a>
+                        <a href="#" className='text-white'>support@mail.binharvest.com</a>
                     </li>
                     <li className='text-[14px] relative flex items-center text-[#a2a2b1] font-medium mt-[15px]'>
                         <i className='text-white bg-custom-orange w-[32px] h-[32px] text-center rounded-[50%] mr-[10px] flex items-center justify-center icon-telephone'>
