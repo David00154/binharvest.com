@@ -4,42 +4,48 @@ import CustomCursor from "../components/CustomCursor";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
+import React from "react";
 
 export interface Props {
-	title: string;
+  title: string;
+  Meta?: any;
+  End?: any;
+  brokers?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, Meta, End, brokers = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Binharvest Fx is a global leader in online financial trading and investing, offering FX, indices, commodities, and more."
-		/>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<title>{title} | Global Online Trading Broker</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Binharvest Fx is a global leader in online financial trading and investing, offering FX, indices, commodities, and more."
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>{title} | Global Online Trading Broker</title>
+    {Meta && <Meta />}
+  </head>
 
-	<body class="">
-		<CustomCursor client:load />
-		<Header pathname={Astro.url.pathname} client:load />
-		<slot />
-		<ScrollToTop client:only />
-		<Footer />
-	</body>
+  <body class="">
+    <CustomCursor client:load />
+    <Header pathname={Astro.url.pathname} client:load />
+    <slot />
+    <ScrollToTop client:only />
+    {brokers == false && <Footer />}
+    {End && <End />}
+  </body>
 
-	<style is:global>
-		/* @import url("../styles/index.css");
+  <style is:global>
+    /* @import url("../styles/index.css");
 		h3 {} */
-		h3 {
-			line-height: 1.2;
-		}
-	</style>
+    h3 {
+      line-height: 1.2;
+    }
+  </style>
 </html>

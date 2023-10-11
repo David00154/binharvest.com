@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import jpg from "../../assets/images/1.jpg";
+import { SeoEnd, SeoMeta } from "./tags";
+---
+
+<Layout
+  title="Jeffrey Chadwick - Investment Adviser / Broker"
+  ,
+  Meta={SeoMeta}
+  End={SeoEnd}
+  brokers={true}
+>
+  <div class="preload preload-container">
+    <div class="e-loadholder">
+      <div class="m-loader">
+        <span class="e-text">Loading</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrappper">
+    <div class="container vh-100 d-flex align-items-center">
+      <div class="col-lg-7 col-12 m-auto p-5">
+        <img
+          src={jpg}
+          style="width:100%"
+          class="m-3 p-2 border"
+          alt="Jeffrey Chadwick"
+        />
+
+        <p class="my-3">
+          Jeffrey Chadwick is a CERTIFIED FINANCIAL PLANNER™ professional. He
+          has also earned his Chartered Financial Consultant Designation®. In
+          addition to these designations, Jeffrey Chadwick has his Series 7,
+          Series 63, and Series 9 licenses. He is also licensed in the State of
+          Alabama to offer life insurance and annuity products. Jonathan
+          specializes in Estate, Retirement, and Investment Planning.
+        </p>
+
+        <div class="">
+          <p><strong>Contact Me :</strong></p><i
+            class="fab fa-facebook fa-3x m-3"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
