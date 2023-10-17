@@ -1,3 +1,4 @@
+import jpg from "../../assets/images/1.jpg";
 export const SeoMeta = () => (
   <>
     <meta name="author" content="Jeffrey Chadwick, JeffreyChadwick" />
@@ -17,8 +18,8 @@ export const SeoMeta = () => (
     <link rel="stylesheet" type="text/css" href="assets/dist/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/dist/responsive.css" />
     <link rel="canonical" href="index.html" />
-    {/* <link rel="shortcut icon" href="{" /> */}
-    <link rel="apple-touch-icon-precomposed" href="loggo.png" />
+    <link rel="shortcut icon" href={jpg} />
+    <link rel="apple-touch-icon-precomposed" href={jpg} />
     {/* <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"

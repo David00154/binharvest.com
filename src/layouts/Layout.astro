@@ -21,16 +21,19 @@ const { title, Meta, End, brokers = false } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>{title} | Global Online Trading Broker</title>
     {Meta && <Meta />}
-{!Meta && (<meta
+{!Meta && (
+
+    <link rel="icon" type="png" href="/favicon.png" />
+  <meta
       name="description"
       content="Binharvest Fx is a global leader in online financial trading and investing, offering FX, indices, commodities, and more."
-    />)}
+    />
+)}
 
   </head>
 
